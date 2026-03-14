@@ -59,37 +59,14 @@ Source: [Mendeley Data](https://data.mendeley.com/datasets/4hh45vkp38/5)
 
 ```
 📦 weed-detection-precision-agriculture
- ┣ 📂 notebooks
- ┃ ┣ 📜 weed_yoloxl.ipynb                  # YOLO XL baseline
- ┃ ┣ 📜 weed_yoloxl-RCL.ipynb              # YOLO XL with RCL enhancement
- ┃ ┣ 📜 weed_co_detr.ipynb                 # Co-DETR baseline
- ┃ ┣ 📜 weed_co_detr_RCL.ipynb             # Co-DETR with RCL enhancement
- ┃ ┣ 📜 weed_internlmage_h.ipynb           # InternImage-H baseline
- ┃ ┣ 📜 weed_internlmage_h_RCL.ipynb       # InternImage-H with RCL enhancement
- ┃ ┣ 📜 weed_maxvit.ipynb                  # MaxViT-B baseline
- ┃ ┗ 📜 weed_cascade.ipynb                 # Cascade Eff-B7 NAS-FPN baseline
- ┣ 📂 models
- ┃ ┣ 📜 yoloxl.py                          # YOLO XL model definition
- ┃ ┣ 📜 co_detr.py                         # Co-DETR model definition
- ┃ ┣ 📜 internimage_h.py                   # InternImage-H model definition
- ┃ ┣ 📜 maxvit.py                          # MaxViT-B model definition
- ┃ ┗ 📜 cascade.py                         # Cascade Eff-B7 NAS-FPN definition
- ┣ 📂 utils
- ┃ ┣ 📜 train.py                           # Training and validation loops
- ┃ ┣ 📜 predict.py                         # Inference and prediction utilities
- ┃ ┣ 📜 compare.py                         # Metrics and comparison utilities
- ┃ ┣ 📜 patch_utils.py                     # Image patching and loading
- ┃ ┗ 📜 parser.py                          # Argument parsers
- ┣ 📂 data
- ┃ ┣ 📂 train/
- ┃ ┣ 📂 val/
- ┃ ┗ 📂 test/
- ┣ 📂 results
- ┃ ┗ 📂 predictions/
- ┣ 📜 train.py
- ┣ 📜 predict_testset.py
- ┣ 📜 save_patches.py
- ┣ 📜 requirements.txt
+ ┣ 📜 weed_yoloxl.ipynb                    # YOLO XL baseline — training, inference, evaluation
+ ┣ 📜 weed_yoloxl-RCL.ipynb               # YOLO XL with RCL enhancement
+ ┣ 📜 weed_co_detr.ipynb                   # Co-DETR baseline — training, inference, evaluation
+ ┣ 📜 weed_co_detr_RCL.ipynb              # Co-DETR with RCL enhancement
+ ┣ 📜 weed_internlmage_h.ipynb             # InternImage-H baseline — training, inference, evaluation
+ ┣ 📜 weed_internlmage_h_RCL.ipynb        # InternImage-H with RCL enhancement
+ ┣ 📜 weed_maxvit.ipynb                    # MaxViT-B baseline — training, inference, evaluation
+ ┣ 📜 weed_cascade.ipynb                   # Cascade Eff-B7 NAS-FPN — training, inference, evaluation
  ┗ 📜 README.md
 ```
 
@@ -219,13 +196,15 @@ cd weed-detection-precision-agriculture
 pip install -r requirements.txt
 ```
 
-1. Download the dataset from [Mendeley Data](https://data.mendeley.com/datasets/4hh45vkp38/5) and place it in the `data/` directory
-2. Run `save_patches.py` to preprocess images into patches
-3. Open the relevant notebook in `notebooks/` and run all cells
-   - Use `weed_yoloxl.ipynb` for the YOLO XL baseline
-   - Use `weed_yoloxl-RCL.ipynb` for YOLO XL with RCL enhancement
-   - Repeat for other models as needed
-4. Predictions are saved to `results/predictions/` and evaluated via `compare_predictions.py`
+1. Download the dataset from [Mendeley Data](https://data.mendeley.com/datasets/4hh45vkp38/5)
+2. Open the relevant notebook and run all cells top to bottom:
+   - `weed_yoloxl.ipynb` — YOLO XL baseline
+   - `weed_yoloxl-RCL.ipynb` — YOLO XL with RCL enhancement
+   - `weed_co_detr.ipynb` / `weed_co_detr_RCL.ipynb` — Co-DETR baseline and enhanced
+   - `weed_internlmage_h.ipynb` / `weed_internlmage_h_RCL.ipynb` — InternImage-H baseline and enhanced
+   - `weed_maxvit.ipynb` — MaxViT-B baseline
+   - `weed_cascade.ipynb` — Cascade Eff-B7 NAS-FPN baseline
+3. Each notebook handles its own data loading, model definition, training, inference, and metric evaluation end-to-end
 
 ---
 
