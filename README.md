@@ -22,7 +22,7 @@ Using high-resolution annotated UAV images from Mendeley Data, this project benc
 ## 📂 Dataset
 
 **Deep Learning-Based Early Weed Segmentation Using Motion Blurred UAV Images of Sorghum Fields**
-Source: [Mendeley Data](https://data.mendeley.com/datasets/4hh45vkp38/5)
+Source: [Google Drive](https://drive.google.com/drive/folders/1tott74uWZbsB9m99u-ZFcKsi_ooAV95S?usp=sharing)
 
 - **Framework base:** UAVWeedSegmentation
 - **Image type:** High-resolution UAV imagery of sorghum fields under varied lighting and environmental conditions
@@ -75,8 +75,8 @@ Source: [Mendeley Data](https://data.mendeley.com/datasets/4hh45vkp38/5)
 ## 🔬 Methodology
 
 ### 1. Data Preprocessing
-- Downloaded dataset from Mendeley Data and unzipped into structured `train/val/test` directories
-- Images saved as patches using `save_patches.py` to prepare fixed-size inputs for model training
+- Downloaded dataset from Google Drive and unzipped into structured `train/val/test` directories
+- Images saved as patches to prepare fixed-size inputs for model training
 - Per-fold mean and standard deviation calculated for normalization across K-fold cross-validation splits
 - Custom data loaders built using `kornia` for GPU-accelerated augmentation
 
@@ -189,14 +189,11 @@ class ReParameterizedConv2d(nn.Module):
 
 ```bash
 # Clone the repository
-git clone https://github.com/madhusomethingg/weed-detection-precision-agriculture.git
-cd weed-detection-precision-agriculture
-
-# Install dependencies
-pip install -r requirements.txt
+git clone https://github.com/madhusomethingg/Weed-Detection-Precision-Agriculture.git
+cd Weed-Detection-Precision-Agriculture
 ```
 
-1. Download the dataset from [Mendeley Data](https://data.mendeley.com/datasets/4hh45vkp38/5)
+1. Download the dataset from [Google Drive](https://drive.google.com/drive/folders/1tott74uWZbsB9m99u-ZFcKsi_ooAV95S?usp=sharing)
 2. Open the relevant notebook and run all cells top to bottom:
    - `weed_yoloxl.ipynb` — YOLO XL baseline
    - `weed_yoloxl-RCL.ipynb` — YOLO XL with RCL enhancement
