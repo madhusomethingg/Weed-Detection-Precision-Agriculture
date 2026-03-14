@@ -229,12 +229,6 @@ pip install -r requirements.txt
 
 ---
 
-## 📄 Publication
-
-**"Assessment of State-of-the-art Deep Learning-Based Weed Detection System for Precision Agriculture"**
-*Madhumitha Rajagopal*
-
----
 
 ## 👤 Author
 
