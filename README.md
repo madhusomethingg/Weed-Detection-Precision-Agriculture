@@ -5,7 +5,7 @@
 
 ---
 
-## 📌 Overview
+## 📌 Overview 
 
 Weeds compete with crops for essential resources, yet most detection systems sacrifice either speed or accuracy to manage them. This project asks a more structured question: which state-of-the-art deep learning architecture best balances detection precision and inference speed in complex UAV agricultural imagery — and how much further can a targeted architectural modification push that performance?
 
